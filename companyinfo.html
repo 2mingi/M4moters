@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<!--
+    M4moters by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>No Sidebar - M4moters by HTML5 UP</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <!-- 페이지 전환 효과용 스타일 추가 -->
+        <style>
+            body {
+                opacity: 1;
+                transition: opacity 0.6s;
+            }
+            body.fade-out {
+                opacity: 0;
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+        <div id="page-wrapper">
+
+            <!-- Header -->
+            <header id="header">
+                <h1 id="logo"><a href="main.html">M4moters</a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="main.html">홈</a></li>
+                        <li><a href="companyinfo.html">회사소개</a></li>
+                        <li><a href="companymap.html">오시는 길</a></li>
+                        <li><a href="error.html">고객센터</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Main -->
+            <div id="main" class="wrapper style1">
+                <div class="container">
+                    <header class="major">
+                        <h2>회사소개</h2>
+                        <p>M4moters는 항상 최상의 만족감을 선물해 드립니다.</p>
+                    </header>
+
+                    <!-- Content -->
+                    <section id="content">
+                        <a href="#" class="image fit"><img src="images/pic07_1.jpg" alt="" /></a>
+                        <h3>Dolore Amet Consequat</h3>
+                        <p>Aliquam massa urna, imperdiet sit amet mi non.</p>
+                    </section>
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <ul class="copyright">
+                    <li>상호명 : 엠포모터스</li>
+                    <li>대표 : 연재금</li>
+                    <li>전화 : 032-571-7775</li>
+                    <li>사업자 등록번호 : 476-81-03538</li>
+                    <li>Copyright ⓒ M4moters. All rights Reserved</li>
+                </ul>
+            </footer>
+        </div>
+            
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <!-- 페이지 전환 효과용 스크립트 추가 -->
+        <script>
+            document.body.style.opacity = 0;
+            window.onload = function() {
+                document.body.style.opacity = 1;
+            };
+            $(function(){
+                $('#nav a').on('click', function(e){
+                    var link = $(this).attr('href');
+                    if(link && link.endsWith('.html')){
+                        e.preventDefault();
+                        $('body').addClass('fade-out');
+                        setTimeout(function(){
+                            window.location.href = link;
+                        }, 600);
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
